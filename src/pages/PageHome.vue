@@ -16,21 +16,10 @@
 
     <!-- form -->
     <div v-show="exibir.form">
-      <h2>Cadastrar Tarefa</h2>
-      <input
-        type="text"
-        name="title"
-        id="title"
-        placeholder="Entre com a tarefa"
-        v-model="form.title"
-      />
-      <input
-        type="text"
-        name="project"
-        v-model="form.project"
-        placeholder="Entre com a projeto"
-      />
-      <button class="btn" @click="salvarTarefa">Salvar</button>
+      <TarefaForm
+        :titulo="form.titulo"
+        @salvarClick="recebiTarefas"
+      ></TarefaForm>
     </div>
   </div>
 </template>
@@ -38,18 +27,19 @@
 <script>
 import TasksApi from '../TasksApi.js'
 import TarefaList from '../components/TarefaList.vue'
+import TarefaForm from '../components/TarefaForm.vue'
 
 export default {
   components: {
     TarefaList,
+    TarefaForm,
   },
   data: () => {
     return {
       listaDeTarefa: [],
       exibir: { form: false, lista: true },
       form: {
-        title: '',
-        project: '',
+        titulo: 'Cadastrar',
       },
     }
   },
@@ -63,16 +53,12 @@ export default {
       this.exibir.form = true
       this.exibir.lista = false
     },
-    salvarTarefa() {
-      this.exibir.form = false
-      this.exibir.lista = true
-      const novaTarefa = {
-        title: this.form.title,
-        project: this.form.project,
-        date: new Date().toLocaleDateString('pt'),
-      }
+    recebiTarefas(novaTarefa) {
       TasksApi.createTask(novaTarefa, () => {
+        console.log('recebi')
         this.listarTarefas()
+        this.exibir.form = false
+        this.exibir.lista = true
       })
     },
   },
