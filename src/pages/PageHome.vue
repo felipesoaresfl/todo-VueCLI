@@ -48,7 +48,7 @@ export default {
       listaDeTarefa: [],
       exibir: { form: false, lista: true },
       form: {
-        title: 'teste',
+        title: '',
         project: '',
       },
     }
