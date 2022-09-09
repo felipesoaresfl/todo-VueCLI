@@ -11,7 +11,7 @@
     </div>
     <!-- lista -->
     <div v-show="exibir.lista">
-      <TarefaList :msg="'Welcome to Your Vue.js App'" :tasks="listaDeTarefa" />
+      <TarefaList :msg="'To do list com Vue CLI'" :tasks="listaDeTarefa" />
     </div>
 
     <!-- form -->

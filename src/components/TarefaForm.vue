@@ -36,7 +36,7 @@ export default {
         project: this.form.project,
         date: new Date().toLocaleDateString('pt'),
       }
-      this.$emit('salvarClick', novaTarefa)
+      this.$emit('z', novaTarefa)
     },
   },
 }
