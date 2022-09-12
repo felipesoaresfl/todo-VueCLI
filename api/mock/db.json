@@ -6,23 +6,6 @@
       "project": "Teste"
     },
     {
-      "id": 2,
-      "title": "Tarefa 2",
-      "project": "Contas"
-    },
-    {
-      "title": "TESTE",
-      "project": "ALO",
-      "date": "09/09/2022",
-      "id": 3
-    },
-    {
-      "title": "Alo",
-      "project": "alo",
-      "date": "09/09/2022",
-      "id": 4
-    },
-    {
       "title": "Vue CLI Components",
       "project": "Frontend",
       "date": "09/09/2022",
