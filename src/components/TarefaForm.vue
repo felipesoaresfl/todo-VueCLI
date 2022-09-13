@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     salvarTarefa() {
-      debugger
       const novaTarefa = {
         title: this.form.title,
         project: this.form.project,

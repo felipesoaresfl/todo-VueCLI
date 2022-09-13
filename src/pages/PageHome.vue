@@ -71,7 +71,6 @@ export default {
     recebiSalvar(novaTarefa) {
       TasksApi.createTask(novaTarefa, () => {
         this.listarTarefas()
-        console.log('recebi salvar')
         this.exibir.form = false
         this.exibir.lista = true
       })

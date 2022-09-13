@@ -14,7 +14,6 @@ export default {
   createTask: (task, callback) => {
     axios.post('http://localhost:3000/tasks/', task).then((response) => {
       callback(response.data)
-      console.log(task)
     })
   },
   updateTasks: (task, callback) => {
