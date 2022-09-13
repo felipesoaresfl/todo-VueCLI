@@ -21,7 +21,13 @@ npm run build
 ### Lints and fixes files
 
 ```
-npm run lint
+npm run lint --fix
+```
+
+### Run Mock API db.json
+
+```
+npm run apimock
 ```
 
 ### Customize configuration
