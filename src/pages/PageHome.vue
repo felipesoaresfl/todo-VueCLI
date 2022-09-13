@@ -65,14 +65,13 @@ export default {
     },
     mostrarCadastro() {
       this.form.btn = 'Adicionar'
-      this.form.title = ''
-      this.form.project = ''
       this.exibir.form = true
       this.exibir.lista = false
     },
     recebiSalvar(novaTarefa) {
       TasksApi.createTask(novaTarefa, () => {
         this.listarTarefas()
+        console.log('recebi salvar')
         this.exibir.form = false
         this.exibir.lista = true
       })
